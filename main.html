@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화의전당_mainpage</title>
+  <!-- favicon -->
+  <link rel="icon" href="./images/main_page/favicon 1.png">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- scrollTo -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- javascript -->
+  <script src="./js/header.js" defer></script>
+  <script src="./js/main.js" defer></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="gnbtop">
+      <div class="logo"><a href="./main.html"><img src="images/main_page/logo_white.png" alt="영화의전당 로고"></a></div>
+      <nav class="user_menu">
+        <ul>
+          <li><a href="#!">로그인</a></li>
+          <li><a href="#!">회원가입</a></li>
+          <li><a href="#!">마이페이지</a></li>
+          <li><a href="#!">고객센터</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="gnbouter">
+      <ul class="main_menu">
+        <li class="menu_item"><a href="#!">영화</a></li>
+        <li class="menu_item"><a href="#!">공연/전시/프로그램</a></li>
+        <li class="menu_item"><a href="#!">예매</a></li>
+        <li class="menu_item"><a href="#!">예술관</a></li>
+      </ul>
+
+      <div class="search_box_pc">
+        <input type="search" placeholder="검색어를 입력하세요">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_container">
+        <ul>
+          <li>
+            <ul>
+              <li><a href="#!">상영 시간표</a></li>
+              <li><a href="#!">현재 상영작</a></li>
+              <li><a href="#!">상영 예정작</a></li>
+              <li><a href="./sub/sub.html" style="color: #9E0E92;">영화와 비평</a></li>
+              <li><a href="#!">관람 후기</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">공연/전시 프로그램 안내</a></li>
+              <li><a href="#!">공연 일정</a></li>
+              <li><a href="#!">전시 일정</a></li>
+              <li><a href="#!">프로그램 일정</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">예매하기</a></li>
+              <li><a href="#!">예매하기 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">영화도서관 소개</a></li>
+              <li><a href="#!">이용 안내</a></li>
+              <li><a href="#!">자료 검색</a></li>
+              <li><a href="#!">대여/대관 안내</a></li>
+              <li><a href="#!">대여/대관 신청</a></li>
+              <li><a href="#!">시설안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">아카데미 안내</a></li>
+              <li><a href="#!">아카데미 신청</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이 청소년 아카데미</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile_header" id="mobileHeader">
+    <div class="top_bar">
+      <div class="logo"><a href="./main.html"><img src="images/main_page/logo_black.png" alt="영화의전당 로고"></a></div>
+      <div class="searchbox_mobile">
+        <input type="search" placeholder="검색어를 입력하세요">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="hamburger_btn" id="hamburgerBtn">
+        <i class="fa-solid fa-list"></i>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mobile_menu" id="mobileMenu">
+    <div class="login_section" id="loginSection">
+      <div>로그인 <i class="fa-solid fa-circle-chevron-right"></i></div>
+    </div>
+    <div class="menu_inner">
+      <div class="left_tabs">
+        <ul>
+          <li>영화</li>
+          <li>공연/전시/프로그램</li>
+          <li>예매</li>
+          <li>예술관</li>
+          <li>아카데미</li>
+        </ul>
+
+      </div>
+      <div class="right_content">
+        <div id="tab_movie" class="menu_content">
+          <ul>
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영작</a></li>
+            <li><a href="#!">상영예정작</a></li>
+            <li><a href="./sub/sub.html" style="color: #9E0E92;">영화와 비평</a></li>
+            <li><a href="#!">관람후기</a></li>
+          </ul>
+        </div>
+        <div id="tab_intro" class="menu_content">
+          <ul>
+            <li><a href="#!">공연/전시프로그램 안내</a></li>
+            <li><a href="#!">공연 일정</a></li>
+            <li><a href="#!">전시 일정</a></li>
+            <li><a href="#!">프로그램 일정</a></li>
+          </ul>
+        </div>
+        <div id="tab_reservation" class="menu_content">
+          <ul>
+            <li><a href="#!">영화 예매</a></li>
+            <li><a href="#!">공연 예매</a></li>
+          </ul>
+        </div>
+        <div id="tab_artspace" class="menu_content">
+          <ul>
+            <li><a href="#!">영화도서관 소개</a></li>
+            <li><a href="#!">이용 안내</a></li>
+            <li><a href="#!">자료 검색</a></li>
+            <li><a href="#!">대여/대관안내</a></li>
+            <li><a href="#!">대여/대관신청</a></li>
+            <li><a href="#!">시설안내</a></li>
+          </ul>
+        </div>
+        <div id="tab_academy" class="menu_content">
+          <ul>
+            <li><a href="#!">아카데미 안내</a></li>
+            <li><a href="#!">아카데미 신청</a></li>
+            <li><a href="#!">영화 아카데미</a></li>
+            <li><a href="#!">예술 아카데미</a></li>
+            <li><a href="#!">어린이 청소년 아카데미</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture>
+          <source media="(min-width: 769px)" srcset="./images/swiper_01.jpg">
+          <source media="(min-width: 601px)" srcset="./images/main_page/visual_main_01_601.png">
+          <source media="(min-width: 320px)" srcset="./images/main_page/wide_banner_01_320.png">
+          <img src="./images/swiper_01.jpg" style="width: 100%;" alt="반응형 이미지1">
+        </picture>
+      </div>
+
+      <div class="swiper-slide">
+        <picture>
+          <source media="(min-width: 769px)" srcset="./images/swiper_02.jpg">
+          <source media="(min-width: 601px)" srcset="./images/main_page/wide_banner_02_601.png">
+          <source media="(min-width: 320px)" srcset="./images/main_page/wide_banner_02_320.png">
+          <img src="./images/swiper_02.jpg" style="width: 100%;" alt="반응형 이미지2">
+        </picture>
+      </div>
+
+      <div class="swiper-slide">
+        <picture>
+          <source media="(min-width: 769px)" srcset="./images/swiper_03.jpg">
+          <source media="(min-width: 601px)" srcset="./images/main_page/wide_banner_03_601.png">
+          <source media="(min-width: 320px)" srcset="./images/main_page/wide_banner_03_320.png">
+          <img src="./images/swiper_03.jpg" style="width: 100%;" alt="반응형 이미지3">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </section><!--swiper-->
+
+  <div class="wrap">
+    <section class="best_screen">
+      <ul class="best_screen_tab">
+        <li data-tab="popular">인기상영작</li>
+        <li data-tab="upcoming">상영예정작</li>
+      </ul>
+      <div class="slide_wrapper">
+        <button class="slide_btn prev"><i class="fa-solid fa-angle-left"></i></button>
+        <div class="best_list active" id="bestListPopular">
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">1</span>
+              <img src="./images/main_page/poster_01.jpg" alt="F1더무비">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">F1 더 무비</p>
+            <p class="reservation">예매율 40.9%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">2</span>
+              <img src="./images/main_page/poster_02.jpg" alt="드래곤 길들이기">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">드래곤 길들이기</p>
+            <p class="reservation">예매율 6.1%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">3</span>
+              <img src="./images/main_page/poster_03.jpg" alt="톰크루즈 미션임파서블">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">톰크루즈 미션임파서블</p>
+            <p class="reservation">예매율 4.9%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">4</span>
+              <img src="./images/main_page/poster_04.jpg" alt="바람계곡의 나우시카">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">바람계곡의 나우시카</p>
+            <p class="reservation">예매율 4.6%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">5</span>
+              <img src="./images/main_page/poster_05.jpg" alt="엘리오">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">엘리오</p>
+            <p class="reservation">예매율 4.0%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">6</span>
+              <img src="./images/main_page/poster_06.jpg" alt="해피엔드">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">해피엔드</p>
+            <p class="reservation">예매율 3.9%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">7</span>
+              <img src="./images/main_page/poster_07.jpg" alt="하이파이브">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">하이파이브</p>
+            <p class="reservation">예매율 3.6%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">8</span>
+              <img src="./images/main_page/poster_08.jpg" alt="신성한 나무의 씨앗">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">신성한 나무의 씨앗</p>
+            <p class="reservation">예매율 3.5%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">9</span>
+              <img src="./images/main_page/poster_09.jpg" alt="페키니안 스킴">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">페키니안 스킴</p>
+            <p class="reservation">예매율 2.0%</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">10</span>
+              <img src="./images/main_page/poster_10.jpg" alt="귤레귤레">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">귤레귤레</p>
+            <p class="reservation">예매율 2.0%</p>
+          </a>
+        </div><!-- best_list -->
+
+        <div class="best_list" id="bestListUpcoming">
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">1</span>
+              <img src="./images/main_page/poster_05.jpg" alt="상영예정작1">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작1</p>
+            <p class="reservation">개봉 예정일</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">2</span>
+              <img src="./images/main_page/poster_08.jpg" alt="상영예정작2">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작2</p>
+            <p class="reservation">2025.08.15</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">3</span>
+              <img src="./images/main_page/poster_02.jpg" alt="상영예정작3">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작3</p>
+            <p class="reservation">2025.09.01</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">4</span>
+              <img src="./images/main_page/poster_07.jpg" alt="상영예정작4">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작4</p>
+            <p class="reservation">2025.09.07</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">5</span>
+              <img src="./images/main_page/poster_04.jpg" alt="상영예정작5">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작5</p>
+            <p class="reservation">2025.09.15</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">6</span>
+              <img src="./images/main_page/poster_09.jpg" alt="상영예정작6">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작6</p>
+            <p class="reservation">2025.09.20</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">7</span>
+              <img src="./images/main_page/poster_01.jpg" alt="상영예정작7">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작7</p>
+            <p class="reservation">2025.10.01</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">8</span>
+              <img src="./images/main_page/poster_03.jpg" alt="상영예정작8">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작8</p>
+            <p class="reservation">2025.10.11</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">9</span>
+              <img src="./images/main_page/poster_10.jpg" alt="상영예정작9">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작9</p>
+            <p class="reservation">2025.10.19</p>
+          </a>
+          <a href="#!" class="bestscreen_list">
+            <div class="poster_wrap">
+              <span class="rank">10</span>
+              <img src="./images/main_page/poster_06.jpg" alt="상영예정작10">
+              <button class="detail_btn">자세히 보기</button>
+            </div>
+            <p class="best_title">상영예정작10</p>
+            <p class="reservation">2025.10.25</p>
+          </a>
+        </div><!-- best_list -->
+        <button class="slide_btn next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div><!-- slide_wrapper-->
+    </section><!--best_screen-->
+
+    <section class="schedule">
+      <div class="schedule_tit">일정표</div>
+      <div class="schedule_container">
+
+        <div class="mobile_schedule">
+          <div class="schedule_header">
+            <div class="nav_arrow prev_day"><i class="fa-solid fa-circle-chevron-left"></i></div>
+            <span class="current_date_mobile">2025.07.30일</span>
+            <div class="nav_arrow next_day"><i class="fa-solid fa-circle-chevron-right"></i></div>
+            <a href="#!" class="schedule_all_btn">+</a>
+          </div>
+          <div class="category_tabs">
+            <button class="tab_btn active" data-category="movie">영화</button>
+            <button class="tab_btn" data-category="exhibition">전시</button>
+            <button class="tab_btn" data-category="performance">공연</button>
+          </div>
+          <div class="schedule_list mobile_list">
+            <div class="category_content active" data-category="movie">
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">10:00</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">F1 더무비</div>
+                    <div class="schedule_location">상영관</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">14:30</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">드래곤 길들이기</div>
+                    <div class="schedule_location">상영관</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">19:00</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">톰크루즈 미션 임파서블</div>
+                    <div class="schedule_location">소극장</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">21:00</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">바람계곡의 나우시카</div>
+                    <div class="schedule_location">중극장</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">21:00</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">엘리오</div>
+                    <div class="schedule_location">대극장</div>
+                  </div>
+                </div>
+              </a>
+            </div><!-- movie -->
+            <div class="category_content" data-category="exhibition">
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">25.05.05</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">상상공작소 '매직월드'</div>
+                    <div class="schedule_location">다목적홀(전시실)</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">25.02.14</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">제 4회 부산 국제어린이청소년아트페어 인 루브르</div>
+                    <div class="schedule_location">다목적홀(전시실)</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">25.10.18</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">이영란의 감성체험 가루나무모래흙</div>
+                    <div class="schedule_location">다목적홀(전시실)</div>
+                  </div>
+                </div>
+              </a>
+            </div><!-- exhibition -->
+            <div class="category_content" data-category="performance">
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">19:30</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">2025 김경호 전국 투어 콘서트</div>
+                    <div class="schedule_location">하늘연극장</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#!">
+                <div class="schedule_item">
+                  <div class="schedule_time">20:00</div>
+                  <div class="schedule_details">
+                    <div class="schedule_title">2025 야외콘서트 7월: 사랑을 품은 영화음악 콘서트</div>
+                    <div class="schedule_location">야외극장</div>
+                  </div>
+                </div>
+              </a>
+            </div><!-- performance -->
+          </div><!-- mobile_list -->
+        </div><!-- mobile_schedule -->
+
+        <div class="pc_schedule">
+          <div class="calendar_section">
+            <div class="calendar_header">
+              <button class="nav_arrow prev_month"><i class="fa-solid fa-circle-chevron-left"></i></button>
+              <span class="current_month_pc">2025년 7월</span>
+              <button class="nav_arrow next_month"><i class="fa-solid fa-circle-chevron-right"></i></button>
+            </div>
+            <div class="calendar_grid">
+              <div class="day_name">일</div>
+              <div class="day_name">월</div>
+              <div class="day_name">화</div>
+              <div class="day_name">수</div>
+              <div class="day_name">목</div>
+              <div class="day_name">금</div>
+              <div class="day_name">토</div>
+            </div>
+            <div class="date">
+              <div></div>
+              <div></div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+            </div>
+            <div class="date">
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+            </div>
+            <div class="date">
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>16</div>
+              <div>17</div>
+              <div>18</div>
+              <div>19</div>
+            </div>
+            <div class="date">
+              <div>20</div>
+              <div>21</div>
+              <div>22</div>
+              <div>23</div>
+              <div>24</div>
+              <div>25</div>
+              <div>26</div>
+            </div>
+            <div class="date">
+              <div>27</div>
+              <div>28</div>
+              <div>29</div>
+              <div>30</div>
+              <div>31</div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="list_section">
+            <div class="list_section_title">목록</div>
+
+            <div class="category_tabs">
+              <button class="tab_btn active" data-category="movie">영화</button>
+              <button class="tab_btn" data-category="exhibition">전시</button>
+              <button class="tab_btn" data-category="performance">공연</button>
+            </div>
+            <div class="schedule_list pc_list">
+              <div class="category_content active" data-category="movie">
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">14:00</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">F1 더무비</div>
+                      <div class="schedule_location">상영관</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">19:30</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">드래곤 길들이기</div>
+                      <div class="schedule_location">상영관</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">19:30</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">톰크루즈 미션 임파서블</div>
+                      <div class="schedule_location">소극장</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">19:30</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">바람계곡의 나우시카</div>
+                      <div class="schedule_location">중극장</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">19:30</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">엘리오</div>
+                      <div class="schedule_location">대극장</div>
+                    </div>
+                  </div>
+                </a>
+              </div><!-- movie -->
+              <div class="category_content" data-category="exhibition">
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">25.05.05</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">상상공작소 '매직월드'</div>
+                      <div class="schedule_location">다목적홀(전시실)</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">25.02.14</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">제 4회 부산 국제어린이청소년아트페어 인 루브르</div>
+                      <div class="schedule_location">다목적홀(전시실)</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">25.10.18</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">이영란의 감성체험 가루나무모래흙</div>
+                      <div class="schedule_location">다목적홀(전시실)</div>
+                    </div>
+                  </div>
+                </a>
+              </div><!-- exhibition -->
+              <div class="category_content" data-category="performance">
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">19:30</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">2025 김경호 전국 투어 콘서트</div>
+                      <div class="schedule_location">하늘연극장</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_item">
+                    <div class="schedule_time">20:00</div>
+                    <div class="schedule_details">
+                      <div class="schedule_title">2025 야외콘서트 7월: 사랑을 품은 영화음악 콘서트</div>
+                      <div class="schedule_location">야외극장</div>
+                    </div>
+                  </div>
+                </a>
+              </div><!-- performance -->
+            </div>
+          </div>
+        </div><!-- pc_schedule -->
+      </div><!-- schedule_container -->
+    </section><!-- schedule -->
+
+    <section class="keyword_section">
+      <h2 class="keyword_title">키워드</h2>
+      <p class="keyword_subtitle">영화의 전당 키워드를 선택하여 즐겨보세요!</p>
+
+      <div class="keyword_rows_container">
+        <div class="keyword_row top_row">
+          <div class="keyword_track">
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">스릴러</p>
+              <img src="images/main_page/keyword_01_crop.png" alt="스릴러">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">교육</p>
+              <img src="images/main_page/keyword_02_crop.png" alt="교육">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">인권</p>
+              <img src="images/main_page/keyword_03_crop.png" alt="인권">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">코미디</p>
+              <img src="images/main_page/keyword_04_crop.png" alt="코미디">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">음악</p>
+              <img src="images/main_page/keyword_05_crop.png" alt="음악">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">로맨스</p>
+              <img src="images/main_page/keyword_06_crop.png" alt="로맨스">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">뮤지컬</p>
+              <img src="images/main_page/keyword_07_crop.png" alt="뮤지컬">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">SF</p>
+              <img src="images/main_page/keyword_08_crop.png" alt="SF">
+              <div class="keyword_overlay"></div>
+            </a>
+          </div>
+        </div><!-- top_row -->
+
+        <div class="keyword_row bottom_row">
+          <div class="keyword_track">
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">액션</p>
+              <img src="images/main_page/keyword_09_crop.png" alt="액션">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">다큐멘터리</p>
+              <img src="images/main_page/keyword_10_crop.png" alt="다큐멘터리">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">호러</p>
+              <img src="images/main_page/keyword_11_crop.png" alt="호러">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">가족</p>
+              <img src="images/main_page/keyword_12_crop.png" alt="가족">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">실화</p>
+              <img src="images/main_page/keyword_13_crop.png" alt="실화">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">성장/청춘</p>
+              <img src="images/main_page/keyword_14_crop.png" alt="성장/청춘">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">종교</p>
+              <img src="images/main_page/keyword_15_crop.png" alt="종교">
+              <div class="keyword_overlay"></div>
+            </a>
+            <a href="#!" class="keyword_item">
+              <p class="keyword_text">애니메이션</p>
+              <img src="images/main_page/keyword_16_crop.png" alt="애니메이션">
+              <div class="keyword_overlay"></div>
+            </a>
+          </div>
+        </div><!-- bottom_row -->
+      </div><!-- keyword_rows_container -->
+    </section><!--keyword-section-->
+
+    <section class="critics_section">
+      <div class="critics_title">인기비평</div>
+
+      <div class="critics_wrapper">
+        <a href="#!" class="critics_featured">
+          <div class="img_wrap">
+            <img src="images/main_page/criticism_01.jpg" alt="대표 비평 이미지">
+          </div>
+          <p class="featured_title">
+            <보이 인 더 풀> , 풀 밖의 소녀
+          </p>
+          <p class="featured_text">
+            분야에 따라 차이가 있기는 하지만, 특히 예•체능 계통은
+            취미와 직업 사이에서 선택에 따른 인생의 희비가 엇갈릴
+            가능성이 크다. 예를 들어 영화를 좋아하는 것과 영화를
+            잘 찍는 것은 완전히 다른 문제일 수 있는데, 착각하는 ...
+          </p>
+        </a>
+
+        <div class="critics_list">
+          <a href="#!" class="critics_item">
+            <div class="img_wrap">
+              <img src="images/main_page/criticism_02.jpg" alt="비평 이미지 1">
+            </div>
+            <div class="critics_text">
+              <p class="critics_subtitle">버스터 키튼의 방식으로 호소하는 찰리 채플린</p>
+              <p class="critics_desc">
+                재학 중인 대학원에서 타 대학 교수의 강연을 들을 기회가 있었다. 그는 AI 시대의 도래를 말하며 이제 대 ...
+              </p>
+            </div>
+          </a>
+
+          <a href="#!" class="critics_item">
+            <div class="img_wrap">
+              <img src="images/main_page/criticism_03.jpg" alt="비평 이미지 2">
+            </div>
+            <div class="critics_text">
+              <p class="critics_subtitle">
+                <파과> : 사랑, 쓸모, 늙어감에 관하여
+              </p>
+              <p class="critics_desc">
+                민규동 감독의 영화 <파과>는 익숙한 한국 영화의 문법에서 한 걸음 비켜 서 있다.
+                  그것은 영화가 ‘노년 ...
+              </p>
+            </div>
+          </a>
+
+          <a href="#!" class="critics_item">
+            <div class="img_wrap">
+              <img src="images/main_page/criticism_04.jpg" alt="비평 이미지 3">
+            </div>
+            <div class="critics_text">
+              <p class="critics_subtitle">
+                <분리수거> : 어떻게 만나고, 어떻게 헤어지는가
+              </p>
+              <p class="critics_desc">
+                풍부한 메타포를 담은 이 영화는 언어와 배경을 뛰어넘는 대화를 통해 우리를 데려간다.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="view_all_wrap">
+        <a href="#!" class="view_all_btn">비평 전체보기</a>
+      </div>
+    </section><!-- critics-section -->
+
+    <section class="video_section">
+      <div class="video_header">
+        <div class="video_title">최신 인기작 video</div>
+      </div>
+
+      <a href="#!" class="video_thumbnail" target="_blank" style="padding-top: 56.25%;">
+        <iframe src="https://www.youtube.com/embed/QrCJhgC8j9o" title="[귤레귤레] 메인 예고편" allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+      </a>
+
+      <div class="video_info">
+        <div class="video_title_info">귤레귤레</div>
+        <div class="video_meta">
+          <div class="release_date">개봉일: 2025.06.11</div>
+        </div>
+      </div>
+    </section><!-- latest_video_section -->
+
+    <section class="event_section">
+      <div class="event_header">
+        <div class="event_title">EVENT</div>
+      </div>
+
+      <div class="event_slider">
+        <div class="event_card">
+          <div class="event_image_wrapper">
+            <img src="images/main_page/event_01.jpg" alt="이벤트1">
+            <div class="event_overlay">
+              <a href="#!" class="overlay_btn">자세히 보기</a>
+            </div>
+          </div>
+          <div class="event_text">
+            <p class="title">2025 영화사랑방 한국고전영화...</p>
+            <p class="desc">2025.05.01 ~ 2025.07.13</p>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <div class="event_image_wrapper">
+            <img src="images/main_page/event_02.jpg" alt="이벤트2">
+            <div class="event_overlay">
+              <a href="#!" class="overlay_btn">자세히 보기</a>
+            </div>
+          </div>
+          <div class="event_text">
+            <p class="title">세계영화사의 위대한 유산, 월...</p>
+            <p class="desc">2025.06.01 ~ 2025.06.28</p>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <div class="event_image_wrapper">
+            <img src="images/main_page/event_03.jpg" alt="이벤트3">
+            <div class="event_overlay">
+              <a href="#!" class="overlay_btn">자세히 보기</a>
+            </div>
+          </div>
+          <div class="event_text">
+            <p class="title">2025 영화의전당 가치봄 정기상... </p>
+            <p class="desc">2025.04.01 ~ 2025.05.31.</p>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <div class="event_image_wrapper">
+            <img src="images/main_page/event_04.jpg" alt="이벤트4">
+            <div class="event_overlay">
+              <a href="#!" class="overlay_btn">자세히 보기</a>
+            </div>
+          </div>
+          <div class="event_text">
+            <p class="title">2025 영화의 전당 야외 상영회</p>
+            <p class="desc">2025.08.01 ~ 2025.08.17</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="view_all_wrap">
+        <a href="#!" class="view_all_btn">이벤트 전체보기</a>
+      </div>
+    </section><!-- event_section -->
+
+    <section class="best_review">
+      <h2 class="review_title">베스트 관람후기</h2>
+      <div class="review_list">
+        <article class="review_card">
+          <a href="#!" class="review_link">
+            <div class="review_left">
+              <h3 class="review_show_title">28년 후</h3>
+              <p class="review_text">시리즈의 서사치고는 나름 괜찮은듯.</p>
+              <div class="review_user">
+                <img src="images/main_page/profile_01.png" alt="프로필">
+                <span>agga****</span>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="review_right">
+              <img src="images/main_page/keyword_11.jpg" alt="관람후기이미지1">
+              <div class="overlay">
+                <span>자세히 보기</span>
+              </div>
+            </div>
+          </a>
+        </article><!-- review_card -->
+        <article class="review_card">
+          <a href="#!" class="review_link">
+            <div class="review_left">
+              <h3 class="review_show_title">30일</h3>
+              <p class="review_text">극장에서 박수치며 웃는 사람들과 영화본게 얼마만인가~
+                영화도 웃겼지만 함께 본 관객들의 분위기도 너무 재밌었다!</p>
+              <div class="review_user">
+                <img src="images/main_page/profile_02.png" alt="프로필">
+                <span>jow_****</span>
+                <span class="stars">★★★★☆</span>
+              </div>
+            </div>
+            <div class="review_right">
+              <img src="images/main_page/best_review03.jpg" alt="관람후기이미지2">
+              <div class="overlay">
+                <span>자세히 보기</span>
+              </div>
+            </div>
+          </a>
+        </article><!-- review_card -->
+        <article class="review_card">
+          <a href="#!" class="review_link">
+            <div class="review_left">
+              <h3 class="review_show_title">드래곤 길들이기</h3>
+              <p class="review_text">디즈니야 보고있니?
+                실사화는 이렇게 하는거란다
+                되도않는 배우 쓰지말고
+                디즈니도 실사 본받길 바란다 제발</p>
+              <div class="review_user">
+                <img src="images/main_page/profile_03.png" alt="프로필">
+                <span>fowe****</span>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="review_right">
+              <img src="images/main_page/poster_02.jpg" alt="관람후기이미지3">
+              <div class="overlay">
+                <span>자세히 보기</span>
+              </div>
+            </div>
+          </a>
+        </article><!-- review_card -->
+        <article class="review_card">
+          <a href="#!" class="review_link">
+            <div class="review_left">
+              <h3 class="review_show_title">탈주</h3>
+              <p class="review_text">의미없는 삶을 두려워하라</p>
+              <div class="review_user">
+                <img src="images/main_page/profile_04.png" alt="프로필">
+                <span>jinw****</span>
+                <span class="stars">★★★★☆</span>
+              </div>
+            </div>
+            <div class="review_right">
+              <img src="images/main_page/best_review04.jpg" alt="관람후기이미지4">
+              <div class="overlay">
+                <span>자세히 보기</span>
+              </div>
+            </div>
+          </a>
+        </article><!-- review_card -->
+      </div><!-- review_list -->
+      <div class="view_all_wrap">
+        <a href="#!" class="view_all_btn">리뷰 전체보기</a>
+      </div>
+    </section><!-- best_review -->
+
+    <div class="fixed_buttons">
+      <button class="btn_book_ticket">예매하기</button>
+      <button class="btn_scroll_top"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+  </div><!--wrap-->
+
+  <div class="sns_img">
+    <a href="#!"><img src="./images/main_page/icon_facebook.png" alt="facebook"></a>
+    <a href="#!"><img src="./images/main_page/icon_youtube.png" alt="youtube"></a>
+    <a href="#!"><img src="./images/main_page/icon_instagram.png" alt="instagram"></a>
+    <a href="#!"><img src="./images/main_page/icon_twitter.png" alt="twitter"></a>
+  </div>
+
+  <div class="footer_banner">
+    <img src="images/main_page/bottom_banner01.png" alt="홍보배너 이미지">
+  </div>
+
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="footer_left">
+        <p class="cs_title">고객센터 <strong>051-780-6000</strong></p>
+        <p class="cs_time">운영시간: 평일 09:00 ~ 18:00 (점심시간 12:00~13:00)</p>
+        <div class="cs_buttons">
+          <a href="#!" class="cs_btn">1:1 문의</a>
+          <a href="#!" class="cs_btn">FAQ</a>
+        </div>
+      </div>
+      <div class="footer_right">
+        <img src="images/main_page/logo.png" alt="마루온 로고" class="site_logo">
+        <div class="certifications">
+          <img src="images/main_page/certification_01 1.png" alt="인증로고 이미지">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_links">
+      <div class="notice">
+        <p class="notice_title">공지사항</p>
+        <ul class="notice_list">
+          <li><a href="#!">[공지] 영화의전당 '야외광장', '야외극장' 명칭 공모</a></li>
+          <li><a href="#!">[안내] 시스템 점검으로 인한 서비스 중단</a></li>
+          <li><a href="#!">[이벤트] 여름 맞이 관람권 할인 이벤트</a></li>
+          <li><a href="#!">[공지] 영화관람 에티켓 안내</a></li>
+        </ul>
+      </div>
+      <div class="footer_nav">
+        <a href="#!">개인정보처리방침</a>
+        <a href="#!">이용약관</a>
+        <a href="#!">장애인이용안내</a>
+        <a href="#!">취소/환불 가이드</a>
+        <a href="#!">정보공개</a>
+      </div>
+    </div>
+
+    <div class="footer_address">
+      <p>
+        (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br>
+        TEL. 051-780-6000/6080 Fax. 051-780-6019<br>
+        (재)영화의전당 대표자 고인범 사업자번호 : 617-82-11427<br>
+        통신판매업신고 : 부산해운 제0510호 <a href="#!" style="color: #000248;">사업자정보 확인</a><br>
+        COPYRIGHT &copyright BUSAN CINEMA CENTER. ALL RIGHTS RESERVED
+      </p>
+    </div>
+  </footer><!--footer-->
+
+
+</body>
+
+</html>

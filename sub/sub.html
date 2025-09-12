@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>영화와비평</title>
+  <!-- favicon -->
+  <link rel="icon" href="../images/main_page/favicon 1.png">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- scrollTo -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/sub.css" />
+  <!-- Javascript-->
+  <script src="../js/header.js" defer></script>
+  <script src="./js/sub.js" defer></script>
+
+</head>
+
+<body>
+
+
+  <header>
+    <div class="gnbtop">
+      <div class="logo"><a href="../main.html"><img src="../images/main_page/logo_white.png" alt="영화의전당 로고"></a></div>
+      <nav class="user_menu">
+        <ul>
+          <li><a href="#!">로그인</a></li>
+          <li><a href="#!">회원가입</a></li>
+          <li><a href="#!">마이페이지</a></li>
+          <li><a href="#!">고객센터</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="gnbouter">
+      <ul class="main_menu">
+        <li class="menu_item"><a href="#!">영화</a></li>
+        <li class="menu_item"><a href="#!">공연/전시/프로그램</a></li>
+        <li class="menu_item"><a href="#!">예매</a></li>
+        <li class="menu_item"><a href="#!">예술관</a></li>
+      </ul>
+
+      <div class="search_box_pc">
+        <input type="search" placeholder="검색어를 입력하세요">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_container">
+        <ul>
+          <li>
+            <ul>
+              <li><a href="#!">상영 시간표</a></li>
+              <li><a href="#!">현재 상영작</a></li>
+              <li><a href="#!">상영 예정작</a></li>
+              <li><a href="./sub.html" style="color: #9E0E92;">영화와 비평</a></li>
+              <li><a href="#!">관람 후기</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">공연/전시 프로그램 안내</a></li>
+              <li><a href="#!">공연 일정</a></li>
+              <li><a href="#!">전시 일정</a></li>
+              <li><a href="#!">프로그램 일정</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">예매하기</a></li>
+              <li><a href="#!">예매하기 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">영화도서관 소개</a></li>
+              <li><a href="#!">이용 안내</a></li>
+              <li><a href="#!">자료 검색</a></li>
+              <li><a href="#!">대여/대관 안내</a></li>
+              <li><a href="#!">대여/대관 신청</a></li>
+              <li><a href="#!">시설안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#!">아카데미 안내</a></li>
+              <li><a href="#!">아카데미 신청</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이 청소년 아카데미</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile_header" id="mobileHeader">
+    <div class="top_bar">
+      <div class="logo"><a href="../main.html"><img src="../images/main_page/logo_black.png" alt="영화의전당 로고"></a></div>
+      <div class="searchbox_mobile">
+        <input type="search" placeholder="검색어를 입력하세요">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="hamburger_btn" id="hamburgerBtn">
+        <i class="fa-solid fa-list"></i>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mobile_menu" id="mobileMenu">
+    <div class="login_section" id="loginSection">
+      <div>로그인 <i class="fa-solid fa-circle-chevron-right"></i></div>
+    </div>
+    <div class="menu_inner">
+      <div class="left_tabs">
+        <ul>
+          <li>영화</li>
+          <li>공연/전시/프로그램</li>
+          <li>예매</li>
+          <li>예술관</li>
+          <li>아카데미</li>
+        </ul>
+
+      </div>
+      <div class="right_content">
+        <div id="tab_movie" class="menu_content">
+          <ul>
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영작</a></li>
+            <li><a href="#!">상영예정작</a></li>
+            <li><a href="./sub.html">영화와 비평</a></li>
+            <li><a href="#!">관람후기</a></li>
+          </ul>
+        </div>
+        <div id="tab_intro" class="menu_content">
+          <ul>
+            <li><a href="#!">공연/전시프로그램 안내</a></li>
+            <li><a href="#!">공연 일정</a></li>
+            <li><a href="#!">전시 일정</a></li>
+            <li><a href="#!">프로그램 일정</a></li>
+          </ul>
+        </div>
+        <div id="tab_reservation" class="menu_content">
+          <ul>
+            <li><a href="#!">영화 예매</a></li>
+            <li><a href="#!">공연 예매</a></li>
+          </ul>
+        </div>
+        <div id="tab_artspace" class="menu_content">
+          <ul>
+            <li><a href="#!">영화도서관 소개</a></li>
+            <li><a href="#!">이용 안내</a></li>
+            <li><a href="#!">자료 검색</a></li>
+            <li><a href="#!">대여/대관안내</a></li>
+            <li><a href="#!">대여/대관신청</a></li>
+            <li><a href="#!">시설안내</a></li>
+          </ul>
+        </div>
+        <div id="tab_academy" class="menu_content">
+          <ul>
+            <li><a href="#!">아카데미 안내</a></li>
+            <li><a href="#!">아카데미 신청</a></li>
+            <li><a href="#!">영화 아카데미</a></li>
+            <li><a href="#!">예술 아카데미</a></li>
+            <li><a href="#!">어린이 청소년 아카데미</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <aside>
+      <ul>
+        <li><button class="tab-btn">상영시간표</button></li>
+        <li><button class="tab-btn">현재상영작</button></li>
+        <li><button class="tab-btn">상영예정작</button></li>
+        <li><button class="tab-btn active">영화와 비평</button></li>
+        <li><button class="tab-btn">관람후기</button></li>
+      </ul>
+    </aside>
+
+    <main>
+      <nav class="breadcrumb">
+        <a href="../main.html"><i class="fa-solid fa-house"></i></a>
+        &nbsp;&nbsp;>&nbsp;
+        <a href="#!">영화</a>
+        &nbsp;>&nbsp;
+        <a href="#!">영화와 비평</a>
+      </nav>
+
+      <section id="critics_section">
+        <p class="title">영화와 비평</p>
+        <p class="description">
+          영화에 대한 전문적 식견과 통찰력, 다양한 관점이 돋보이는 '영화평론가'의 차별화된 평론을 만나는 공간입니다.
+          감독과 영화에 대한 전문적인 지식을 바탕으로 한 논리적인 평론글로 여러분을 새로운 영화 세상으로 안내합니다.
+        </p>
+
+        <div class="critics_list">
+          <div class="critic_item active" data-id="critic_01">
+            <img src="./images/criticism/criticism_01.jpg" alt="정지혜 평론가 사진" />
+            <div class="hover_box">정지혜 평론가</div>
+          </div>
+          <div class="critic_item" data-id="critic_02">
+            <img src="./images/criticism/criticism_02.jpg" alt="이동진 평론가 사진" />
+            <div class="hover_box">윤필립 평론가</div>
+          </div>
+          <div class="critic_item" data-id="critic_03">
+            <img src="./images/criticism/criticism_03.jpg" alt="김소영 평론가 사진" />
+            <div class="hover_box">이시현 평론가</div>
+          </div>
+          <div class="critic_item" data-id="critic_04">
+            <img src="./images/criticism/criticism_04.jpg" alt="장지애 평론가 사진" />
+            <div class="hover_box">장지애 평론가</div>
+          </div>
+        </div>
+
+        <div class="critic_detail">
+          <div class="name" id="critic_name">한국영화평론가협회 정지혜 평론가</div>
+          <div class="desc" id="critic_desc">
+            동국대학교에서 극작과 영화이론을 전공. 前 대구대, 경남대에서 콘텐츠 시나리오 창작 강의. 속초국제장애인영화제 프로그래머. 「현대미술을 가지고 노는 그림책」 시리즈 출판.
+            르몽드, 텐아시아 등에 영화평론과 리뷰를 기고. 現. 작가 에이전시 밀어 운영. 순천 KBS 라디오 시네마 톡톡 출연. CGV극장과 함께 개봉하는 독립/예술영화의 GV를 기획 진행 하고
+            있다.
+          </div>
+        </div>
+      </section>
+
+      <section id="review_section">
+        <p class="title">피프레시 월요시네마</p>
+        <p class="intro">
+          영화의전당은 국제영화비평가연맹 한국본부(피프레시)와 함께 매월 1회 영화평론가들이 영화를 깊이 있게 분석하는 온라인 GV '월요시네마'의 발제 내용을 소개합니다.
+        </p>
+        <div class="review_list">
+          <a href="#!" class="review_item">
+            <img src="./images/review/review1.jpg" alt="영화리뷰이미지1" />
+            <p>피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든것>에 관하여</p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review5.jpg" alt="영화리뷰이미지2" />
+            <p>일상 속 관계의 흐름에 관한 녹색주의적 성찰, <그 자연이 네게 뭐라고 하니></p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review9.jpg" alt="영화리뷰이미지3" />
+            <p>버스터 키튼의 방식으로 호소하는 찰리 채플린</p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review13.jpg" alt="영화리뷰이미지4" />
+            <p><내가 누워있을 때> : 정지의 감각과 움직임의 궤적</p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review2.jpg" alt="영화리뷰이미지5" />
+            <p>The Room Next Door 룸 넥스트 도어 2024</p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review6.jpg" alt="영화리뷰이미지6" />
+            <p>절제된 연출 그리고 역동하는 연기, <파란></p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review10.jpg" alt="영화리뷰이미지7" />
+            <p>소문의 스크린</p>
+          </a>
+          <a href="#!" class="review_item">
+            <img src="./images/review/review14.jpg" alt="영화리뷰이미지8" />
+            <p><파과> : 사랑, 쓸모, 늙어감에 관하여</p>
+          </a>
+        </div>
+        <button class="more_btn" onclick="location.href='./sub.html'">평론 더보기</button>
+      </section>
+
+
+      <section id="column_sections">
+        <div class="column_left">
+          <section id="film_section_content">
+            <p class="title">영화의전당이 소개하는 영화와 인문학</p>
+            <ul>
+              <li>
+                <a href="#!" class="film_item_card">
+                  <img src="./images/humanity/humanity1.jpg" alt="영화와 인문학 이미지1" />
+                  <div class="text_content">
+                    <p>세대 갈등을 넘는 자본과의 응전 - 영화 <소주전쟁>
+                    </p>
+                    <p class="description_text">이 영화는 사회적 약자의 목소리를 대변하며, 자본주의 사회의 부조리함을 날카롭게 비판합니다. 감독의 섬세한 연출과 배우들의
+                      열연이 돋보이는 수작입니다.</p>
+                    <p class="date">2025-06-19</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="film_item_card">
+                  <img src="./images/humanity/humanity2.jpg" alt="영화와 인문학 이미지2" />
+                  <div class="text_content">
+                    <p>도시의 그림자, 숨겨진 진실 - 영화 <밤의 도시>
+                    </p>
+                    <p class="description_text">어두운 도시의 뒷골목에서 벌어지는 미스터리한 사건들을 따라가며 인간 본성의 양면성을 탐구합니다. 긴장감 넘치는 전개가 일품입니다.
+                    </p>
+                    <p class="date">2025-06-20</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="film_item_card">
+                  <img src="./images/humanity/humanity3.jpg" alt="영화와 인문학 이미지3" />
+                  <div class="text_content">
+                    <p>시간을 넘나드는 사랑 - 영화 <영원의 연인>
+                    </p>
+                    <p class="description_text">시공간을 초월한 운명적인 사랑 이야기를 통해 삶과 죽음, 그리고 존재의 의미를 되새기게 하는 감동적인 작품입니다. 아름다운
+                      영상미가 돋보입니다.</p>
+                    <p class="date">2025-06-21</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="film_item_card">
+                  <img src="./images/humanity/humanity4.jpg" alt="영화와 인문학 이미지4" />
+                  <div class="text_content">
+                    <p>기억의 조각들 - 영화 <파편화된 기억>
+                    </p>
+                    <p class="description_text">잃어버린 기억을 찾아가는 주인공의 여정을 통해 자아를 탐색하고 진정한 행복의 의미를 깨닫는 과정을 그립니다. 섬세한 심리 묘사가
+                      인상적입니다.</p>
+                    <p class="date">2025-06-22</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="film_item_card">
+                  <img src="./images/humanity/humanity5.jpg" alt="영화와 인문학 이미지5" />
+                  <div class="text_content">
+                    <p>미래를 향한 발자취 - 영화 <새로운 시작>
+                    </p>
+                    <p class="description_text">암울한 미래 속에서 희망을 찾아 나서는 인류의 이야기를 통해 용기와 연대의 중요성을 강조합니다. 강렬한 메시지를 담은 SF
+                      영화입니다.</p>
+                    <p class="date">2025-06-23</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <button class="more_btn" onclick="location.href='./sub.html'">인문학 더보기</button>
+          </section>
+        </div><!-- column_left -->
+
+        <div class="column_right">
+          <section id="citizen_section_content">
+            <p class="title">시민평론단</p>
+            <div class="citizen_list">
+              <a href="#!" class="citizen_item">
+                <img src="./images/criticism/citizen01.jpg" alt="시민평론가 정명선" />
+                <div class="citizen_text_box">시민평론가 '정명선'님 <br>완벽하지 않아서 더 완벽한 우리의 나날들</div>
+              </a>
+              <a href="#!" class="citizen_item">
+                <img src="./images/criticism/citizen02.jpg" alt="시민평론가 정명선" />
+                <div class="citizen_text_box">시민평론가 '오승하'님 <br>내 인생의 영화 ~영화 구룡성채 : 무법지대를 보고</div>
+              </a>
+              <a href="#!" class="citizen_item">
+                <img src="./images/criticism/citizen03.jpg" alt="시민평론가 정명선" />
+                <div class="citizen_text_box">시민평론가 '김제동'님 <br>막걸리를 아침햇살로 번역하는 당돌한 어린이들!</div>
+              </a>
+            </div>
+            <button class="more_btn" onclick="location.href='./sub.html'">시민평론 더보기</button>
+          </section>
+        </div><!-- column_right -->
+      </section><!-- column_sections -->
+    </main>
+
+    <div class="fixed_buttons">
+      <button class="btn_book_ticket">예매하기</button>
+      <button class="btn_scroll_top"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </div>
+
+
+  <div class="sns_img">
+    <a href="#!"><img src="../images/main_page/icon_facebook.png" alt="facebook"></a>
+    <a href="#!"><img src="../images/main_page/icon_youtube.png" alt="youtube"></a>
+    <a href="#!"><img src="../images/main_page/icon_instagram.png" alt="instagram"></a>
+    <a href="#!"><img src="../images/main_page/icon_twitter.png" alt="twitter"></a>
+  </div>
+
+  <div class="footer_banner">
+    <img src="../images/main_page/bottom_banner01.png" alt="홍보배너 이미지">
+  </div>
+
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="footer_left">
+        <p class="cs_title">고객센터 <strong>051-780-6000</strong></p>
+        <p class="cs_time">운영시간: 평일 09:00 ~ 18:00 (점심시간 12:00~13:00)</p>
+        <div class="cs_buttons">
+          <a href="#!" class="cs_btn">1:1 문의</a>
+          <a href="#!" class="cs_btn">FAQ</a>
+        </div>
+      </div>
+      <div class="footer_right">
+        <img src="../images/main_page/logo.png" alt="마루온 로고" class="site_logo">
+        <div class="certifications">
+          <img src="../images/main_page/certification_01 1.png" alt="인증로고 이미지">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_links">
+      <div class="notice">
+        <p class="notice_title">공지사항</p>
+        <ul class="notice_list">
+          <li><a href="#!">[공지] 영화의전당 '야외광장', '야외극장' 명칭 공모</a></li>
+          <li><a href="#!">[안내] 시스템 점검으로 인한 서비스 중단</a></li>
+          <li><a href="#!">[이벤트] 여름 맞이 관람권 할인 이벤트</a></li>
+          <li><a href="#!">[공지] 영화관람 에티켓 안내</a></li>
+        </ul>
+      </div>
+      <div class="footer_nav">
+        <a href="#!">개인정보처리방침</a>
+        <a href="#!">이용약관</a>
+        <a href="#!">장애인이용안내</a>
+        <a href="#!">취소/환불 가이드</a>
+        <a href="#!">정보공개</a>
+      </div>
+    </div>
+
+    <div class="footer_address">
+      <p>
+        (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동 1467번지)<br>
+        TEL. 051-780-6000/6080 Fax. 051-780-6019<br>
+        (재)영화의전당 대표자 고인범 사업자번호 : 617-82-11427<br>
+        통신판매업신고 : 부산해운 제0510호 <a href="#!" style="color: #000248;">사업자정보 확인</a><br>
+        COPYRIGHT &copyright BUSAN CINEMA CENTER. ALL RIGHTS RESERVED
+      </p>
+    </div>
+  </footer><!--footer-->
+
+
+</body>
+
+</html>
