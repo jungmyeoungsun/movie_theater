@@ -749,9 +749,8 @@ img {
 
 
 .bestscreen_list {
-  flex: 0 0 calc((100% - 3 * 10px) / 4);
+  flex: 0 0 45%;
   box-sizing: border-box;
-  max-width: calc((100% - 3 * 10px) / 4);
 }
 
 .poster_wrap {
@@ -1267,7 +1266,7 @@ button {
 
 
 .event_card {
-  flex: 0 0 80%;
+  flex: 0 0 45%;
   scroll-snap-align: center;
   background-color: #fff;
   border-radius: 10px;
@@ -1497,11 +1496,13 @@ button {
   /* title */
   .schedule .schedule_tit,
   .critics_section .critics_title,
-  .best_screen_tab li,
   .video_section .video_header .video_title,
   .event_section .event_header .event_title,
   .best_review .review_title {
     font-size: 2rem;
+    margin-top: 100px;
+  }
+  .best_screen_tab li {
     margin-top: 50px;
   }
   .keyword_section .keyword_title {
@@ -1515,8 +1516,7 @@ button {
     padding-left: 0;
   }
   .bestscreen_list {
-    flex: 0 0 calc((100% - 4 * 10px) / 5);
-    max-width: calc((100% - 4 * 10px) / 5);
+    flex: 0 0 35%;
   }
 
   /* schedule */
@@ -1624,7 +1624,7 @@ button {
 
   /* event */
   .event_card {
-    flex: 0 0 calc(35% - 10px);
+    flex: 0 0 35%;
     scroll-snap-align: none;
     transform: scale(1);
   }
@@ -1646,12 +1646,14 @@ button {
   /* title */
   .schedule .schedule_tit,
   .critics_section .critics_title,
-  .best_screen_tab li,
-  .video_section .video_header .video_title,
+  .video_title,
   .event_section .event_header .event_title,
   .best_review .review_title {
     text-align: left;
     font-size: 2.3rem;
+    margin-top: 150px;
+  }
+  .best_screen_tab li {
     margin-top: 80px;
   }
   .keyword_section .keyword_title {
@@ -1797,7 +1799,7 @@ button {
 
   /* video*/
   .video_section {
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
   .video_header {
     justify-content: space-between;
@@ -1822,7 +1824,7 @@ button {
 
   /*event*/
   .event_section {
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
   .event_header {
     justify-content: space-between;

@@ -802,15 +802,16 @@ main {
 }
 
 .review_item {
-  flex: 0 0 45%;
+  flex: 0 0 80%;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .review_item img {
+  border-radius: 10px;
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 9 / 10;
 }
 
 .review_item p {
@@ -1125,7 +1126,7 @@ main {
   }
 
   .critic_item {
-    flex: 0 0 calc(50% - 5px);
+    flex: 0 0 35%;
   }
 
 
@@ -1135,7 +1136,7 @@ main {
   }
 
   .review_item {
-    flex: 0 0 calc(33.333% - 6.666px);
+    flex: 0 0 35%;
   }
 
   .review_item p {
@@ -1174,11 +1175,6 @@ main {
     gap: 10px;
   }
 
-  /* #citizen_section_content .citizen_item {
-    width: calc(50% - 5px);
-    flex-direction: column;
-    padding: 0;
-  } */
 
   #citizen_section_content .citizen_item img {
     height: auto;
