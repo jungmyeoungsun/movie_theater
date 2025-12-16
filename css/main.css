@@ -1647,7 +1647,7 @@ button {
   .schedule .schedule_tit,
   .critics_section .critics_title,
   .video_title,
-  .event_section .event_header .event_title,
+  .event_title,
   .best_review .review_title {
     text-align: left;
     font-size: 2.3rem;
@@ -1655,6 +1655,7 @@ button {
   }
   .best_screen_tab li {
     margin-top: 80px;
+    font-size: 2.3rem;
   }
   .keyword_section .keyword_title {
     text-align: center;
