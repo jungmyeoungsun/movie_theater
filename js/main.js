@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const slideButtons = document.querySelectorAll('.best_screen .slide_btn');
 
     let currentList = null;
+    let itemsPerSlide = 4;
+    let itemGap = 10;
 
     function showList(tabName) {
         listGroups.forEach(function (list) {
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (targetList) {
             targetList.classList.add('active');
             currentList = targetList;
+            currentList.scrollLeft = 0;
         }
     }
 
@@ -53,20 +56,33 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
+
         tabItems[0].classList.add('active');
         showList(tabItems[0].dataset.tab);
     }; // best_screen_tab
 
 
     if (slideButtons.length > 0) {
+        function getItemsPerSlide() {
+            if (window.innerWidth >= 1024) {
+                return 5;
+            } else if (window.innerWidth >= 768) {
+                return 5;
+            } else {
+                return 4;
+            }
+        }
+
         function slideList(direction) {
             if (!currentList) return;
 
+            itemsPerSlide = getItemsPerSlide();
+
             const item = currentList.querySelector('.bestscreen_list');
             if (item) {
-                const itemWidth = item.offsetWidth + 10;
+                const itemFullWidth = item.offsetWidth + itemGap; // item + gap
                 currentList.scrollBy({
-                    left: direction * itemWidth,
+                    left: direction * (itemFullWidth * itemsPerSlide),
                     behavior: 'smooth'
                 });
             }
@@ -85,37 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }; // slide_btn
 
-
-    // const scheduleSections = document.querySelectorAll('.schedule');
-
-    // scheduleSections.forEach(function (section) {
-    //     const tabButtons = section.querySelectorAll('.tab_btn');
-    //     const contents = section.querySelectorAll('.category_content');
-
-    //     tabButtons.forEach(function (tab) {
-    //         tab.addEventListener('click', function () {
-    //             const category = tab.dataset.category;
-
-    //             tabButtons.forEach(function (btn) {
-    //                 btn.classList.remove('active');
-    //             });
-
-    //             tab.classList.add('active');
-
-    //             contents.forEach(function (content) {
-    //                 if (content.dataset.category === category) {
-    //                     content.classList.add('active');
-    //                 } else {
-    //                     content.classList.remove('active');
-    //                 }
-    //             });
-    //         });
-    //     }); // schedule_category_tab
-    // });
-
 });
 
 
+// schedule
+const serverCurrentTime = new Date('2025-12-17T15:18:37');
 
 function formatDateYYYYMMDD(date) {
     const y = date.getFullYear();
@@ -124,35 +114,142 @@ function formatDateYYYYMMDD(date) {
     return `${y}-${m}-${d}`;
 }
 
-const today = new Date(2025, 7, 4);
-
 const scheduleData = {
-    '2025-08-04': {
+    // 12월
+    '2025-12-01': {
+        movie: [{ time: '10:00', title: '이터널스', location: '상영관', href: '#!' }],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+        performance: []
+    },
+    '2025-12-02': {
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+    },
+    '2025-12-03': {
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+    },
+    '2025-12-04': {
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+    },
+    '2025-12-05': {
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+    },
+    '2025-12-10': {
+        movie: [{ time: '14:30', title: '겨울왕국 2', location: '상영관', href: '#!' }],
+    },
+    '2025-12-16': {
         movie: [
-            { time: '14:00', title: 'F1 더무비', location: '상영관', href: '#!' },
-            { time: '19:30', title: '드래곤 길들이기', location: '상영관', href: '#!' },
-            { time: '19:30', title: '톰크루즈 미션 임파서블', location: '소극장', href: '#!' },
-            { time: '19:30', title: '바람계곡의 나우시카', location: '중극장', href: '#!' },
-            { time: '19:30', title: '엘리오', location: '대극장', href: '#!' }
+            { time: '10:00', title: '크리스마스 스캔들', location: '상영관', href: '#!' },
+            { time: '13:00', title: '스파이더맨: 노 웨이 홈', location: '상영관', href: '#!' }
         ],
         exhibition: [
-            { time: '2025.05.05', title: "상상공작소 '매직월드'", location: '다목적홀(전시실)', href: '#!' },
-            { time: '2025.02.14', title: '제 4회 부산 국제어린이청소년아트페어 인 루브르', location: '다목적홀(전시실)', href: '#!' },
-            { time: '2025.10.18', title: '이영란의 감성체험 가루나무모래흙', location: '다목적홀(전시실)', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
         ],
         performance: [
-            { time: '19:30', title: '2025 김경호 전국 투어 콘서트', location: '하늘연극장', href: '#!' },
-            { time: '20:00', title: '2025 야외콘서트 7월: 사랑을 품은 영화음악 콘서트', location: '야외극장', href: '#!' }
+            { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' }
         ]
+    },
+    '2025-12-17': {
+        movie: [
+            { time: '16:00', title: '분노의 질주: 더 얼티메이트', location: '대극장', href: '#!' },
+            { time: '19:30', title: '겨울 왕국', location: '소극장', href: '#!' },
+            { time: '22:30', title: 'F1 더 무비', location: '상영관', href: '#!' }
+        ],
+        exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ],
+        performance: [
+            { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' }
+        ]
+    },
+    '2025-12-18': {
+        movie: [
+            { time: '11:00', title: '나 홀로 집에', location: '상영관', href: '#!' }, 
+            { time: '19:30', title: '겨울 왕국', location: '소극장', href: '#!' }
+        ],
+        exhibition: [
+            { time: '12.08-12.18', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ],
+        performance: [
+            { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' },
+            { time: '18:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' }
+        ]
+    },
+    '2025-12-19': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-20': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-21': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-22': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-23': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-24': {
+            movie: [{ time: '16:00', title: '나 홀로 집에', location: '상영관', href: '#!' },{ time: '16:00', title: '러브 액츄얼리', location: '상영관', href: '#!' }],
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' }
+        ]},
+    '2025-12-25': {
+        movie: [{ time: '15:00', title: '나 홀로 집에', location: '상영관', href: '#!' }],
+        exhibition: [{ time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' }],
+        performance: [{ time: '19:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' }]
+    },
+    '2025-12-26': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+        '2025-12-27': {
+     exhibition: [
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+        ]},
+    
+    //1월
+    '2026-01-01': {
+        movie: [{ time: '10:00', title: '새해 시작', location: '상영관', href: '#!' }],
+        exhibition: [],
+        performance: []
+    },
+    // 11월
+    '2025-11-01': {
+        movie: [{ time: '10:00', title: 'F1 더 무비', location: '상영관', href: '#!' },{ time: '13:20', title: '엘리오', location: '상영관', href: '#!' },{ time: '15:10', title: '드래곤 길들이기', location: '상영관', href: '#!' }],
+        exhibition: [{ time: '11.01-11.30', title: '가을 풍경화전', location: '전시실', href: '#!' }],
+        performance: []
     }
-}; // scheduleData
+};
 
-
-let selectedDate = formatDateYYYYMMDD(today); // selectedDate
+let currentDisplayedDate = new Date(serverCurrentTime.getFullYear(), serverCurrentTime.getMonth(), serverCurrentTime.getDate()); // 현재 날짜
+let currentMonth = new Date(serverCurrentTime.getFullYear(), serverCurrentTime.getMonth(), 1); // PC month(1일으로 설정)
 let selectedCategoryPc = 'movie';
 let selectedCategoryMobile = 'movie';
 
-function renderScheduleList(dateKey, category, containerRoot) {
+
+
+
+function formatFullDate(date) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const dayOfWeek = days[date.getDay()];
+    return `${y}.${m}.${d} (${dayOfWeek})`;
+}
+
+// schedule list
+function renderScheduleList(dateObj, category, containerRoot) {
+    const dateKey = formatDateYYYYMMDD(dateObj);
     const categoryContainer = containerRoot.querySelector(`.category_content[data-category="${category}"]`);
     if (!categoryContainer) return;
     categoryContainer.innerHTML = '';
@@ -194,98 +291,137 @@ function renderScheduleList(dateKey, category, containerRoot) {
     });
 } // renderScheduleList
 
+// mobile_schedule update
+function updateMobileDateDisplay() {
+    document.querySelector('.current_date_mobile').textContent = formatFullDate(currentDisplayedDate);
+    renderScheduleList(currentDisplayedDate, selectedCategoryMobile, document.querySelector('.mobile_schedule'));
+}
 
-function setupCategoryTabs() {
-    document.querySelectorAll('.pc_schedule .category_tabs .tab_btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const category = btn.dataset.category;
-            if (!category) return;
-            document.querySelectorAll('.pc_schedule .category_tabs .tab_btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            selectedCategoryPc = category;
+// PC
+function renderCalendar() {
+    const calendarGrid = document.querySelector('.pc_schedule .calendar_grid');
+    if (!calendarGrid) return;
+    calendarGrid.innerHTML = `
+        <div class="day_name">일</div>
+        <div class="day_name">월</div>
+        <div class="day_name">화</div>
+        <div class="day_name">수</div>
+        <div class="day_name">목</div>
+        <div class="day_name">금</div>
+        <div class="day_name">토</div>
+    `;
 
-            document.querySelectorAll('.pc_list .category_content').forEach(cc => cc.classList.remove('active'));
-            const target = document.querySelector(`.pc_list .category_content[data-category="${category}"]`);
-            if (target) target.classList.add('active');
+    const currentMonthPcSpan = document.querySelector('.current_month_pc');
+    if (currentMonthPcSpan) {
+        currentMonthPcSpan.textContent = `${currentMonth.getFullYear()}년 ${currentMonth.getMonth() + 1}월`;
+    }
 
-            renderScheduleList(selectedDate, category, document.querySelector('.pc_schedule'));
-        });
-    });
+    const year = currentMonth.getFullYear();
+    const month = currentMonth.getMonth();
 
-    document.querySelectorAll('.mobile_schedule .category_tabs .tab_btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const category = btn.dataset.category;
-            if (!category) return;
-            document.querySelectorAll('.mobile_schedule .category_tabs .tab_btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            selectedCategoryMobile = category;
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0); // 마지막달
 
-            document.querySelectorAll('.mobile_list .category_content').forEach(cc => cc.classList.remove('active'));
-            const target = document.querySelector(`.mobile_list .category_content[data-category="${category}"]`);
-            if (target) target.classList.add('active');
+    const startDayOfWeek = firstDay.getDay(); // 0(일) ~ 6(토)
 
-            renderScheduleList(selectedDate, category, document.querySelector('.mobile_schedule'));
-        });
-    });
-}; // category_tabs_click
+    // 전 달
+    for (let i = 0; i < startDayOfWeek; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.classList.add('date_cell', 'empty');
+        calendarGrid.appendChild(emptyCell);
+    }
 
+    for (let day = 1; day <= lastDay.getDate(); day++) {
+        const dateCell = document.createElement('div');
+        dateCell.classList.add('date_cell');
+        dateCell.textContent = day;
 
-function setupCalendarSelection() {
-    const currentMonthSpan = document.querySelector('.current_month_pc');
-    function refreshMonthDisplay(date) {
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        currentMonthSpan.textContent = `${year}년 ${month}월`;
-    } // current_month_pc
+        const fullDate = new Date(year, month, day);
 
-
-    document.querySelectorAll('.pc_schedule .date > div').forEach(dayCell => {
-        dayCell.addEventListener('click', () => {
-            const dayText = dayCell.textContent.trim();
-            if (!dayText || isNaN(dayText)) return;
-
-            document.querySelectorAll('.pc_schedule .date > div').forEach(d => d.classList.remove('selected_day'));
-            dayCell.classList.add('selected_day');
-
-            const clickedDate = new Date(2025, 7, parseInt(dayText, 10)); // 8월
-            selectedDate = formatDateYYYYMMDD(clickedDate);
-
-            renderScheduleList(selectedDate, selectedCategoryPc, document.querySelector('.pc_schedule'));
-        });
-    }); // .pc_schedule_click
-
-
-    document.querySelector('.prev_month')?.addEventListener('click', () => {
-        refreshMonthDisplay(new Date(2025, 6, 1));
-    });
-    document.querySelector('.next_month')?.addEventListener('click', () => {
-        refreshMonthDisplay(new Date(2025, 8, 1));
-    }); // prev_month, next_month
-
-    document.querySelectorAll('.pc_schedule .date > div').forEach(dayCell => {
-        if (dayCell.textContent.trim() === String(today.getDate())) {
-            dayCell.classList.add('selected_day');
+        if (fullDate.toDateString() === serverCurrentTime.toDateString()) {
+            dateCell.classList.add('current_day');
         }
-    }); // pc_schedule_selected_day
 
-    refreshMonthDisplay(today);
+        if (fullDate.toDateString() === currentDisplayedDate.toDateString()) {
+            dateCell.classList.add('selected_day');
+        }
+
+        // click_event
+        dateCell.addEventListener('click', () => {
+            document.querySelectorAll('.pc_schedule .calendar_grid .date_cell').forEach(cell => cell.classList.remove('selected_day'));
+            dateCell.classList.add('selected_day');
+            currentDisplayedDate = new Date(fullDate.getFullYear(), fullDate.getMonth(), fullDate.getDate());
+            renderScheduleList(currentDisplayedDate, selectedCategoryPc, document.querySelector('.pc_schedule'));
+        });
+        calendarGrid.appendChild(dateCell);
+    }
+
+    renderScheduleList(currentDisplayedDate, selectedCategoryPc, document.querySelector('.pc_schedule'));
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupCategoryTabs();
-    setupCalendarSelection();
+    // category_tab
+    const setupCategoryTabs = (scheduleRootSelector) => {
+        document.querySelectorAll(`${scheduleRootSelector} .category_tabs .tab_btn`).forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const category = btn.dataset.category;
+                if (!category) return;
 
-    renderScheduleList(selectedDate, selectedCategoryPc, document.querySelector('.pc_schedule'));
-    renderScheduleList(selectedDate, selectedCategoryMobile, document.querySelector('.mobile_schedule'));
+                document.querySelectorAll(`${scheduleRootSelector} .category_tabs .tab_btn`).forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
+                if (scheduleRootSelector === '.pc_schedule') {
+                    selectedCategoryPc = category;
+                } else {
+                    selectedCategoryMobile = category;
+                }
+
+                document.querySelectorAll(`${scheduleRootSelector} .schedule_list .category_content`).forEach(cc => cc.classList.remove('active'));
+                const target = document.querySelector(`${scheduleRootSelector} .schedule_list .category_content[data-category="${category}"]`);
+                if (target) target.classList.add('active');
+
+                renderScheduleList(currentDisplayedDate, category, document.querySelector(scheduleRootSelector));
+            });
+        });
+    };
+
+    setupCategoryTabs('.pc_schedule');
+    setupCategoryTabs('.mobile_schedule');
+
+
+    // PC schedule_btn
+    document.querySelector('.pc_schedule .prev_month')?.addEventListener('click', () => {
+        currentMonth.setMonth(currentMonth.getMonth() - 1);
+        currentDisplayedDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
+        renderCalendar();
+    });
+    document.querySelector('.pc_schedule .next_month')?.addEventListener('click', () => {
+        currentMonth.setMonth(currentMonth.getMonth() + 1);
+        currentDisplayedDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
+        renderCalendar();
+    });
+
+    // Mobile schedule_btn
+    document.querySelector('.mobile_schedule .prev_day')?.addEventListener('click', () => {
+        currentDisplayedDate.setDate(currentDisplayedDate.getDate() - 1);
+        updateMobileDateDisplay();
+    });
+    document.querySelector('.mobile_schedule .next_day')?.addEventListener('click', () => {
+        currentDisplayedDate.setDate(currentDisplayedDate.getDate() + 1);
+        updateMobileDateDisplay();
+    });
+
+
+    renderCalendar(); //pc
+    updateMobileDateDisplay(); // mobile
 
     document.querySelectorAll('.mobile_schedule .category_tabs .tab_btn').forEach(b => {
         if (b.dataset.category === selectedCategoryMobile) b.classList.add('active');
         else b.classList.remove('active');
     });
-    document.querySelectorAll('.mobile_list .category_content').forEach(cc => {
+    document.querySelectorAll('.mobile_schedule .schedule_list .category_content').forEach(cc => {
         if (cc.dataset.category === selectedCategoryMobile) cc.classList.add('active');
         else cc.classList.remove('active');
     });
-}); // schedule_active
+});

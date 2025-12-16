@@ -1,28 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const hamBtn = document.getElementById('hamburgerBtn');
-    const mobileHeader = document.getElementById('mobileHeader');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-
-    if (hamBtn) {
-        hamBtn.addEventListener('click', function () {
-            const isOpen = mobileMenu.classList.toggle('active');
-            mobileHeader.classList.toggle('open', isOpen);
-        });
-
-        document.addEventListener('click', function (e) {
-            const clickedOutsideMenu = !mobileMenu.contains(e.target);
-            const clickedOutsideButton = !hamBtn.contains(e.target);
-            const menuIsOpen = mobileMenu.classList.contains('active');
-
-            if (menuIsOpen && clickedOutsideMenu && clickedOutsideButton) {
-                mobileMenu.classList.remove('active');
-                mobileHeader.classList.remove('open');
-            };
-        });
-    }; // hamburgerBtn
-
-
+    const closeBtn = document.getElementById('closeBtn');
 
     const tabs = document.querySelectorAll('.mobile_menu .left_tabs li');
     const contents = document.querySelectorAll('.mobile_menu .right_content .menu_content');
@@ -37,25 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const showContentByTabName = (tabName) => {
         let contentId = '';
-
         switch (tabName) {
-            case '영화':
-                contentId = 'tab_movie';
-                break;
-            case '공연/전시/프로그램':
-                contentId = 'tab_intro';
-                break;
-            case '예매':
-                contentId = 'tab_reservation';
-                break;
-            case '예술관':
-                contentId = 'tab_artspace';
-                break;
-            case '아카데미':
-                contentId = 'tab_academy';
-                break;
-            default:
-                return;
+            case '영화': contentId = 'tab_movie'; break;
+            case '공연/전시/프로그램': contentId = 'tab_intro'; break;
+            case '예매': contentId = 'tab_reservation'; break;
+            case '예술관': contentId = 'tab_artspace'; break;
+            case '아카데미': contentId = 'tab_academy'; break;
+            default: return;
         };
 
         const contentEl = document.getElementById(contentId);
@@ -79,35 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }; // mobile_menu_tab
 
 
+    // hamburger_btn
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function () {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
 
-    const gnbouter = document.querySelector('.gnbouter');
-    const dropdownMenu = document.querySelector('.dropdown_container');
-
-    if (gnbouter && dropdownMenu) {
-        let timer;
-
-        function showDropdown() {
-            clearTimeout(timer);
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
-            dropdownMenu.style.transform = 'translateY(0)';
-        };
-
-        function hideDropdown() {
-            timer = setTimeout(function () {
-                dropdownMenu.style.opacity = '0';
-                dropdownMenu.style.visibility = 'hidden';
-                dropdownMenu.style.transform = 'translateY(0)';
-            }, 200);
-        };
-
-        gnbouter.addEventListener('mouseenter', showDropdown);
-        gnbouter.addEventListener('mouseleave', hideDropdown);
-        dropdownMenu.addEventListener('mouseenter', showDropdown);
-        dropdownMenu.addEventListener('mouseleave', hideDropdown);
-    }; // dropdown_container
-
-
+    // close
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
 
     const fixedBtns = document.querySelector('.fixed_buttons');
     const topBtn = document.querySelector('.btn_scroll_top');
@@ -122,7 +76,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (topBtn) {
         topBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            $.scrollTo(0, 500);
+            if (typeof jQuery !== 'undefined') {
+                jQuery.scrollTo(0, 500);
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         });
     };
 
@@ -131,5 +92,4 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '#!';
         });
     }; // fixed_buttons
-
 });
