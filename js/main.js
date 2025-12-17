@@ -117,24 +117,64 @@ function formatDateYYYYMMDD(date) {
 const scheduleData = {
     // 12월
     '2025-12-01': {
-        movie: [{ time: '10:00', title: '이터널스', location: '상영관', href: '#!' }],
-        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+        movie: [{ time: '09:30', title: '주토피아 2', location: '중극장', href: '#!' },
+            { time: '10:10', title: '제이 켈리', location: '소극장', href: '#!' },
+            { time: '11:50', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+            { time: '12:50', title: '국보', location: '소극장', href: '#!' },
+        ],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
         performance: []
     },
     '2025-12-02': {
-        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+        movie: [{ time: '09:30', title: '주토피아 2', location: '중극장', href: '#!' },
+            { time: '10:30', title: '왼손잡이 소녀', location: '소극장', href: '#!' },
+            { time: '11:50', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+            { time: '12:40', title: '석류의 빛깔', location: '소극장', href: '#!' },
+        ],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
+        performance: [{ time: '19:30', title: '제2회 밀마루합창단 정기연주회', location: '하늘연극장', href: '#!' },]
     },
+    
     '2025-12-03': {
-        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+         movie: [{ time: '09:30', title: '주토피아 2', location: '중극장', href: '#!' },
+            { time: '11:50', title: '콘크리트 마켓', location: '중극장', href: '#!' },
+            { time: '14:30', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+            { time: '12:50', title: '(리플레이)행복한 라짜로', location: '시네마테크', href: '#!' },
+        ],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
     },
     '2025-12-04': {
-        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+        movie: [{ time: '11:30', title: '(2025 BIAIF)섹션 1', location: '중극장', href: '#!' },
+            { time: '12:30', title: '(2025 BIAIF)섹션 2', location: '중극장', href: '#!' },
+            { time: '13:50', title: '(2025 BIAIF)섹션 3', location: '중극장', href: '#!' },
+            { time: '14:50', title: '(2025 BIAIF)섹션 4', location: '중극장', href: '#!' },
+        ],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
     },
     '2025-12-05': {
-        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' }],
+        movie: [{ time: '09:30', title: '주토피아 2', location: '중극장', href: '#!' },
+            { time: '10:00', title: '(2025 BIAIF)섹션 4', location: '소극장', href: '#!' },
+            { time: '14:30', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+            { time: '17:10', title: '콘크리트 마켓', location: '중극장', href: '#!' },
+        ],
+        exhibition: [{ time: '12.01-12.05', title: '미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
+        performance: [{ time: '19:30', title: '재즈로 쓰는 12편의 드라마 론브랜튼의 크리스마스 in 재즈', location: '하늘연극장', href: '#!' },]
     },
     '2025-12-10': {
         movie: [{ time: '14:30', title: '겨울왕국 2', location: '상영관', href: '#!' }],
+        exhibition: [{ time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
+        ],
+        performance: [{ time: '19:30', title: '조성우 X 국립국악원 5Days', location: '하늘연극장', href: '#!' },]
     },
     '2025-12-16': {
         movie: [
@@ -142,7 +182,8 @@ const scheduleData = {
             { time: '13:00', title: '스파이더맨: 노 웨이 홈', location: '상영관', href: '#!' }
         ],
         exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ],
         performance: [
             { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' }
@@ -155,10 +196,12 @@ const scheduleData = {
             { time: '22:30', title: 'F1 더 무비', location: '상영관', href: '#!' }
         ],
         exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ],
         performance: [
-            { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' }
+            { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' },
+            { time: '19:30', title: '2025 한밤의 유U:콘서트 12월', location: '하늘연극장', href: '#!' },
         ]
     },
     '2025-12-18': {
@@ -168,48 +211,62 @@ const scheduleData = {
         ],
         exhibition: [
             { time: '12.08-12.18', title: '미디어아트 특별전', location: '전시실', href: '#!' },
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' },
         ],
         performance: [
             { time: '19:30', title: '크리스마스 오케스트라', location: '하늘연극장', href: '#!' },
-            { time: '18:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' }
+            { time: '18:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' },
         ]
     },
     '2025-12-19': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
         '2025-12-20': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
-        ]},
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' },
+        ],
+        performance: [{ time: '19:00', title: '2025 지역사회 공연예술 공헌사업 춤-동무동락', location: '하늘연극장', href: '#!' },]
+    },
+        
         '2025-12-21': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
         '2025-12-22': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
         '2025-12-23': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
         '2025-12-24': {
             movie: [{ time: '16:00', title: '나 홀로 집에', location: '상영관', href: '#!' },{ time: '16:00', title: '러브 액츄얼리', location: '상영관', href: '#!' }],
      exhibition: [
             { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
-            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' }
+            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
     '2025-12-25': {
         movie: [{ time: '15:00', title: '나 홀로 집에', location: '상영관', href: '#!' }],
         exhibition: [{ time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
-            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' }],
-        performance: [{ time: '19:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' }]
+            { time: '12.24-12.25', title: '크리스마스 미디어아트 특별전', location: '전시실', href: '#!' },
+        { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }],
+        performance: [{ time: '19:00', title: '크리스마스 갈라 콘서트', location: '야외극장', href: '#!' },
+            { time: '18:00', title: '김창완밴드 크리스마스 콘서트', location: '하늘연극장', href: '#!' },
+        ]
     },
     '2025-12-26': {
      exhibition: [
-            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' }
+            { time: '12.16-12.27', title: '크리스마스 일러스트전', location: '갤러리', href: '#!' },
+            { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }
         ]},
         '2025-12-27': {
      exhibition: [
@@ -219,14 +276,18 @@ const scheduleData = {
     //1월
     '2026-01-01': {
         movie: [{ time: '10:00', title: '새해 시작', location: '상영관', href: '#!' }],
-        exhibition: [],
-        performance: []
+        exhibition: [{ time: '01.01-01-01', title: '이영란의 감성체험 가루나무모래흙 ', location: '갤러리', href: '#!' },],
+        performance: [{ time: '19:30', title: '이머시브 뮤지컬<부산포>', location: '루프씨어터', href: '#!' },]
     },
     // 11월
     '2025-11-01': {
         movie: [{ time: '10:00', title: 'F1 더 무비', location: '상영관', href: '#!' },{ time: '13:20', title: '엘리오', location: '상영관', href: '#!' },{ time: '15:10', title: '드래곤 길들이기', location: '상영관', href: '#!' }],
         exhibition: [{ time: '11.01-11.30', title: '가을 풍경화전', location: '전시실', href: '#!' }],
-        performance: []
+        performance: [{ time: '17:00', title: '출제합창단 콘서트', location: '하늘연극장', href: '#!' },
+            { time: '17:00', title: '제21회부산국제합창제', location: '하늘연극장', href: '#!' },
+            { time: '19:30', title: '스페셜콘서트', location: '하늘연극장', href: '#!' },
+            { time: '19:30', title: '이머시브 뮤지컬<부산포>', location: '루프씨어터', href: '#!' },
+        ]
     }
 };
 

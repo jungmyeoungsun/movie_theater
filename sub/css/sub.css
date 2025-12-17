@@ -192,12 +192,12 @@ header {
 }
 
 .dropdown_container ul .dropdown_sub_menu li {
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .dropdown_container ul .dropdown_sub_menu li a {
   color: #121212;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   transition: color 0.3s ease;
 }
 
@@ -521,6 +521,7 @@ header {
     margin-top: 20px;
     display: none;
   }
+  
 }
 
 
