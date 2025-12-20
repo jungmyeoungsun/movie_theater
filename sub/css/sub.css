@@ -5,6 +5,9 @@ html {
 }
 
 * {
+  border: none;
+  background: none;
+  font-style: inherit;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -623,18 +626,22 @@ header {
 
 
 /* button */
-button.more_btn {
+.more_btn {
+  /* background-color: #fff; */
+}
+.more_btn button {
   width: 120px;
   height: 40px;
   line-height: 40px;
+  margin: 20px auto;
   display: block;
-  background-color: #fff;
-  border: 1px solid #d6007e;
   color: #d6007e;
+  border: 1px solid #d6007e;
   font-size: 1.4rem;
   border-radius: 30px;
   text-align: center;
   margin: 20px auto;
+  cursor: pointer;
 }
 
 .container {
@@ -673,6 +680,8 @@ aside ul li button {
   border: none;
   background: none;
   border-left: 4px solid #fff;
+  cursor: pointer;
+  transition: all 0.1s ease;
 }
 
 aside ul li button.active,
@@ -941,6 +950,10 @@ main {
   transition: all 0.3s ease;
 }
 
+.fixed_buttons button {
+  cursor: pointer;
+}
+
 .fixed_buttons.show {
   opacity: 1;
   visibility: visible;
@@ -1092,24 +1105,6 @@ main {
   text-decoration: underline;
 }
 
-
-/* tablet */
-@media (min-width: 768px) {
-  .mobile_menu {
-    width: 450px;
-    top: 55px;
-  }
-
-  .mobile_header .logo img {
-    height: 30px;
-  }
-
-  .searchbox_mobile {
-    height: 35px;
-    margin: 0 auto;
-  }
-}
-
 @media (min-width: 600px) {
   .title {
     font-size: 2rem;
@@ -1182,6 +1177,27 @@ main {
     aspect-ratio: 4 / 5;
   }
 }
+
+
+
+/* tablet */
+@media (min-width: 768px) {
+  .mobile_menu {
+    width: 450px;
+    top: 55px;
+  }
+
+  .mobile_header .logo img {
+    height: 30px;
+  }
+
+  .searchbox_mobile {
+    height: 35px;
+    margin: 0 auto;
+  }
+}
+
+
 
 /* pc */
 @media (min-width: 1024px) {
@@ -1365,6 +1381,7 @@ cursor: pointer;
 
   .citizen_text_box {
     opacity: 0;
+    transition: all 0.3s ease;
   }
 
   #citizen_section_content .citizen_item:hover .citizen_text_box {

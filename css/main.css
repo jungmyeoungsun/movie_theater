@@ -151,7 +151,8 @@ header {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  
+  ty: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
@@ -1406,6 +1407,8 @@ button {
 
 .overlay {
   display: none;
+  display: flex;
+  /* 요소 숨겨져트랜지션 적용 안되는 이유 - display*/
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1415,6 +1418,10 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease,
+  visibility 0.3s ease;
 }
 
 .overlay span {
@@ -1454,6 +1461,10 @@ button {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+}
+
+.fixed_buttons button {
+  cursor: pointer;
 }
 
 .fixed_buttons.show {
@@ -1527,7 +1538,7 @@ button {
 
   .pc_schedule {
     display: flex;
-    height: 520px;
+    height: 450px;
   }
   .schedule_list {
   height: 400px;
@@ -1658,9 +1669,15 @@ button {
     font-size: 2.3rem;
     margin-top: 150px;
   }
+  
   .best_screen_tab li {
     margin-top: 80px;
     font-size: 2.3rem;
+  }
+
+  .pc_schedule {
+    display: flex;
+    height: 500px;
   }
   .keyword_section .keyword_title {
     text-align: center;
@@ -1877,6 +1894,10 @@ button {
 
   .review_link:hover .overlay {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    /* .overlay에서 display:none이 적용되어 있어서 transition이 적용 안되는 문제
+    -> .overlay에 flex 적용 후 opacity와 visibility로 조절함!! */
   }
 
   .review_more a:hover {
