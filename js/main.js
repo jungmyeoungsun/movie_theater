@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // schedule
-const serverCurrentTime = new Date('2025-12-22T15:18:37');
+const serverCurrentTime = new Date('2025-12-30T15:18:37');
 
 function formatDateYYYYMMDD(date) {
     const y = date.getFullYear();
@@ -357,7 +357,12 @@ const scheduleData = {
         ]
     },
     '2025-12-28': {
-        movie: [{ time: '15:00', title: '나 홀로 집에', location: '상영관', href: '#!' }],
+         movie: [ { time: '15:00', title: '나 홀로 집에', location: '상영관', href: '#!' },
+            { time: '09:30', title: '주토피아 2', location: '상영관', href: '#!' },
+        { time: '10:10', title: '제이 켈리', location: '소극장', href: '#!' },
+        { time: '11:50', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+        { time: '12:50', title: '국보', location: '소극장', href: '#!' },
+        ],
         exhibition: [
             { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' }],
         performance: [
@@ -365,19 +370,36 @@ const scheduleData = {
             { time: '18:00', title: '김창완밴드 크리스마스 콘서트', location: '하늘연극장', href: '#!' },
         ]
     },
+
+
     '2025-12-29': {
+         movie: [{ time: '09:30', title: '주토피아 2', location: '상영관', href: '#!' },
+        { time: '10:30', title: '왼손잡이 소녀', location: '소극장', href: '#!' },
+        { time: '11:50', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+        { time: '12:40', title: '석류의 빛깔', location: '소극장', href: '#!' },
+        ],
         exhibition: [
             { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' },
             { time: '12.29-12.31', title: '연말 일러스트전', location: '갤러리', href: '#!' },
         ]
     },
     '2025-12-30': {
+        movie: [{ time: '09:30', title: '주토피아 2', location: '중극장', href: '#!' },
+        { time: '11:50', title: '콘크리트 마켓', location: '상영관', href: '#!' },
+        { time: '12:50', title: '(리플레이)행복한 라짜로', location: '시네마테크', href: '#!' },
+        { time: '14:30', title: '위키드: 포 굿(자막)', location: '중극장', href: '#!' },
+        ],
         exhibition: [
             { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' },
             { time: '12.29-12.31', title: '연말 일러스트전', location: '갤러리', href: '#!' }
         ]
     },
     '2025-12-31': {
+        movie: [{ time: '11:30', title: '(2025 BIAIF)섹션 1', location: '중극장', href: '#!' },
+        { time: '12:30', title: '(2025 BIAIF)섹션 2', location: '상영관', href: '#!' },
+        { time: '13:50', title: '(2025 BIAIF)섹션 3', location: '중극장', href: '#!' },
+        { time: '14:50', title: '(2025 BIAIF)섹션 4', location: '상영관', href: '#!' },
+        ],
         exhibition: [
             { time: '12.01-12.31', title: '미래극장', location: '다목적홀', href: '#!' },
             { time: '12.29-12.31', title: '연말 일러스트전', location: '갤러리', href: '#!' }
